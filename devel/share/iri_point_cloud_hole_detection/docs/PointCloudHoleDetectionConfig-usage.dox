@@ -1,0 +1,13 @@
+\subsubsection usage Usage
+\verbatim
+<node name="PointCloudHoleDetectionAlgorithm" pkg="iri_point_cloud_hole_detection" type="PointCloudHoleDetectionAlgorithm">
+  <param name="hole_min_p" type="int" value="30" />
+  <param name="num_cells" type="int" value="3" />
+  <param name="box_y" type="double" value="0.6" />
+  <param name="box_z_ini" type="double" value="0.0" />
+  <param name="box_z_end" type="double" value="0.1" />
+  <param name="box_x_ini" type="double" value="0.8" />
+  <param name="box_x_end" type="double" value="0.9" />
+</node>
+\endverbatim
+

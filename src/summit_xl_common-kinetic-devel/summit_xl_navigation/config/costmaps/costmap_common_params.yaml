@@ -1,0 +1,39 @@
+#Huella del Robot
+footprint: [[0.362, -0.308], [0.362, 0.308], [-0.362,0.308], [-0.362, -0.308]]
+
+#Frecuencia de funcionamiento
+publish_frequency: 1.0
+update_frequency: 2.0
+
+#Capa de inflacion
+inflation_layer:
+  inflation_radius: 0.5
+
+#Capa de osbtaculos 1
+obstacle_laser_layer:
+  observation_persistence: 0.0
+  obstacle_range: 3.5
+  raytrace_range: 4.0
+  observation_sources: front_3d_laser
+  front_3d_laser: 
+    data_type: PointCloud2
+    topic: $(arg front_3d_laser) #/robot/front_3d_laser/points
+    max_obstacle_height: 0.80
+    min_obstacle_height: 0.01
+    marking: true
+    clearing: true
+    
+#Capa de osbtaculos 2
+obstacle_camera_layer:
+  observation_persistance: 0.0
+  obstacle_range: 3.5
+  raytrace_range: 4.0
+  observation_sources: front_rgbd_camera
+  front_rgbd_camera:
+    data_type: PointCloud2
+    topic: $(arg front_rgbd_camera)
+    max_obstacle_height: 0.80
+    min_obstacle_height: 0.01
+    marking: true
+    clearing: true
+

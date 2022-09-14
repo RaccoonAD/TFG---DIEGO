@@ -1,0 +1,19 @@
+local_costmap:
+  global_frame: robot_odom
+  robot_base_frame: robot_base_link
+  update_frequency: 5.0
+  static_map: false
+  rolling_window: true
+  width: 7.0 
+  height: 7.0 
+  
+# Padding es 0.1 por defecto, dificultando el desplazamiento por espacios estrechos
+  footprint_padding: 0.0
+
+  plugins:
+    - name: obstacle_laser_layer
+      type: "costmap_2d::VoxelLayer"
+    - name: obstacle_camera_layer
+      type: "costmap_2d::VoxelLayer"
+    - name: inflation_layer
+      type: "costmap_2d::InflationLayer"

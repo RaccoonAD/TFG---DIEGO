@@ -1,0 +1,8 @@
+prefix=/home/diego/TFG/devel
+
+Name: iri_obstacle_detection_normals
+Description: Description of iri_obstacle_detection_normals
+Version: 1.0.0
+Cflags: -I/home/diego/TFG/devel/include
+Libs: -L${prefix}/lib 
+Requires: iri_base_algorithm sensor_msgs pcl_ros nodelet

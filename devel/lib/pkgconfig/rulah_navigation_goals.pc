@@ -1,0 +1,8 @@
+prefix=/home/diego/TFG/devel
+
+Name: rulah_navigation_goals
+Description: Description of rulah_navigation_goals
+Version: 1.0.0
+Cflags: -I/home/diego/TFG/src/rulah_navigation_goals/include
+Libs: -L${prefix}/lib 
+Requires: 
